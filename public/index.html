@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shortUrlApp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>URL Shortener | 180 Websites</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js" charset="utf-8"></script>
+  <script src="js/app.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-inverse">
+      <div>
+        <div class="navbar-header">
+          <button class="navbar-toggle btn btn-info" data-toggle="collapse" data-target="#myNavbar">
+            Menu <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+          <a class="navbar-brand" href="http://aaronmassey.pro/">The Aaron Massey Project</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://medium.com/@aaronmassey45">Blog</a></li>
+            <li><a href="https://github.com/aaronmassey45">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="text-center" ng-controller="shortAppCtrl">
+    <h1>URL Shortener Microservice</h1>
+    <h3><a href="https://www.freecodecamp.org" target="_blank">Free Code Camp</a>: API and Microservices Project</h3>
+    <h4>Technologies Used: NodeJS, Express, MongoDB, Mongoose, Javascript, HTML, CSS, and Bootstrap</h4>
+    <input type="text" name="" value="" placeholder="Enter URL to shorten..." ng-model="urlToShorten">
+    <a type="button" class="btn btn-info btn-lg" ng-href="/new/{{urlToShorten}}">Get Short URL</a>
+  </main>
+</body>
+
+</html>
